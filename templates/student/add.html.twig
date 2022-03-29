@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <br><br>   <br><br>   <br><br>   <br><br>
+{#{{ form(formStudent) }}#}
+    {{ form_start(formStudent,{'attr': {'novalidate': 'novalidate'}} ) }}
+    {{ form_label(formStudent.username,{'attr'})}}
+    {{ form_widget(formStudent.username) }}
+    {{ form_errors(formStudent.username) }}
+
+    {{ form_label(formStudent.email)}}
+    {{ form_widget(formStudent.email) }}
+    {{ form_errors(formStudent.email) }}
+    {{ form_end(formStudent) }}
+{% endblock %}
